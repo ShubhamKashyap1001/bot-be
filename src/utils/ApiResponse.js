@@ -5,8 +5,8 @@ class ApiResponse{
         error =[]
     ){
         this.statuscode = statuscode
+        this.data
         this.messege = messege
-        this.error = error
         this.statuscode = statuscode < 400
     }
 }
