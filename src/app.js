@@ -9,10 +9,24 @@ connectDB();
 
 const app = express();
 
-app.use(cors({
-    origin : process.env.CORS_ORIGIN,
-    credentials : true,
-}))
+// app.use(cors({
+//     origin : process.env.CORS_ORIGIN,
+//     credentials : true,
+// }))
+
+// app.use(cors({
+//   origin: "http://localhost:3000",
+//   credentials: true
+// }));
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      callback(null, true); // allow all origins
+    },
+    credentials: true, // allow cookies/auth headers
+  })
+);
 
 app.use(bodyParser.json());
 
