@@ -14,19 +14,21 @@ const app = express();
 //     credentials : true,
 // }))
 
-// app.use(cors({
-//   origin: "http://localhost:3000",
-//   credentials: true
-// }));
+app.use(cors({
+  origin: "http://localhost:3000",
+  credentials: true
+}));
 
-app.use(
-  cors({
-    origin: (origin, callback) => {
-      callback(null, true); // allow all origins
-    },
-    credentials: true, // allow cookies/auth headers
-  })
-);
+// app.use(
+//   cors({
+//     origin: (origin, callback) => {
+//       callback(null, true); // allow all origins
+//     },
+//     credentials: true, // allow cookies/auth headers
+//   })
+// );
+
+
 
 app.use(bodyParser.json());
 

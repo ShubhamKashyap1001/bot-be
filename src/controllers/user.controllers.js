@@ -92,14 +92,14 @@ export const userLogin = asyncHandler(async (req, res, next) => {
     return next(new ApiError(401, "Invalid email or password"));
   }
 
-
   return res
   .status(200)
   .json(
-    new ApiResponse(200,{
-      success: true,
-      message: "Login successful",
-    },
-    "User registration successfully")
-  )
+    new ApiResponse(
+      200,
+      { success: true, message: "Login successful" },
+      "User login successful"
+    )
+  );
+
 });

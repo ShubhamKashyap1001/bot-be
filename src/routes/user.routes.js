@@ -6,7 +6,7 @@ import { userRegister,userLogin } from "../controllers/user.controllers.js";
 const router = Router();
 
 router.post('/', createUser);
-router.post('/Signup',userRegister)
-router.post('/Signin',userLogin)
+router.post('/signup',userRegister)
+router.post('/signin',userLogin)
 
 export default router
